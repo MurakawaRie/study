@@ -22,7 +22,7 @@
   <hr>
   <p>1. 기본적으로 언어깨짐을 방지하기 위해 WEB-INF/web.xml에 언어인코딩필터를 넣어준다.<br><br>
     <a href="img/s2/encodingFilter.txt" style="color:red; background-color: black;">Enconding Filter txtfile</a><br><br>
-    <img src="img/s2/A.png" alt="">
+    <img src="img/S2/A.png" alt="">
   </p>
   <p>2. pom.xml을 이용해서 설치된 maven들의 버전들을 임의로 변경가능하다<br>
     여기서 자바 버전을 Properties에서 바꾼 11버전으로 바꾸어주고<br>
@@ -30,7 +30,7 @@
     아래쪽에 Maven plugin도 같이 삽입해주자<br>
     <span style="background-color: yellow;">&#60;maven-jar-plugin.version&#62;3.1.1&#60;/maven-jar-plugin.version&#62;</span>
     <img src="img/S2/B.png" alt="">
-    <img src="img/s2/C.png" alt="">
+    <img src="img/S2/C.png" alt="">
   </p>
   <p>3. plugin을 검색하여 maven-compiler-plugin에 대한 설정을 바꾸어준다<br>
     버전도 상위버전인 3.5.1로 변경해주고 소스와 타겟의<br>
@@ -38,34 +38,34 @@
     또한 글자깨짐 방지를 위해
     <span style="background-color: yellow;">&#60;encoding&#62;UTF-8&#60;/encoding&#62;</span>
     도 넣어준다<br>
-    <img src="img/s2/D.png" alt="">
-    <img src="img/s2/E.png" alt="">
+    <img src="img/S2/D.png" alt="">
+    <img src="img/S2/E.png" alt="">
   </p>
   <p>4. 설정이 완료되면 프로젝트를 우클릭하여 maven-Update Project를 해준다<br>
-    <img src="img/s2/F.png" alt="">
+    <img src="img/S2/F.png" alt="">
   </p>
   <p>5. 언어깨짐 방지를 위해 Window-Preference로 들어가서<br>
     General-workspace의 텍스트 인코딩을 UTF-8로 바꾸어준다<br>
-    <img src="img/s2/G.png" alt="">
+    <img src="img/S2/G.png" alt="">
   </p>
   <p>6. 프로젝트를 다시 우클릭하여 Run as - Maven Clean / Maven Build 순서로 구동해준다<br>
-    <img src="img/s2/H.png" alt="">
-    <img src="img/s2/h2.png" alt="">
+    <img src="img/S2/H.png" alt="">
+    <img src="img/S2/H2.png" alt="">
   </p>
   <p>7. DTO를 간소화 시키기 위해 lombok.jar을 설치하기 위해 아래 링크에서 maven을 복사한다<br><br>
     <a href="https://mvnrepository.com/artifact/org.projectlombok/lombok/1.18.24" style="color:red; background-color: black;">lombok</a><br><br>
-    <img src="img/s2/i.png" alt="">
+    <img src="img/S2/I.png" alt="">
   </p>
   <p>8. 이제 Spring에선 jar파일을 직접 설치할 필요 없이 maven만 pom.xml에 추가하면 된다<br>
-    <img src="img/s2/J.png" alt="">
+    <img src="img/S2/J.png" alt="">
   </p>
   <p>9. jar이 제대로 설치되었다면 Maven Dependencies에서 lombok를 Java Run as로 실행시키자<br>
-    <img src="img/s2/K.png" alt="">
+    <img src="img/S2/K.png" alt="">
   </p>
   <p>10. lombok 설치창이 뜨면 현재 설치된 STS.exe 경로인것만 체크 후 Install<br>
     만약 경로가 제대로 잡히지 않는다면 <span style="background-color: yellow;">Specify location</span>을 눌러 직접 찾아준다<br>
     설치는 금방 완료되므로 설치가 완료되면 Quit Installer로 끝내기<br>
-    <img src="img/s2/L.png" alt="">
+    <img src="img/S2/L.png" alt="">
   </p>
   <p>11. 임의의 DTO를 만들어 Annotation을 넣고 잘 동작하는지 확인해보자<br>
     <div style="border: 1px solid #000; width:500px; margin:0px 0px 30px 50px;">
@@ -76,7 +76,7 @@
       @Builder : DTO 삽입시 순서에 상관없이 불러올 수 있게 해줌<br>
       </span>
     </div>
-    <img src="img/s2/M.png" alt="" style="margin-left:50px">
+    <img src="img/S2/M.png" alt="" style="margin-left:50px">
   </p>
   <p>12. @Builder의 사용 예시를 확인하기 위해 java/test에 임의의 클래스를 만들어 테스트해보자<br>
     <div style="border: 1px solid #000; width:500px; margin: 0px 0px 30px 50px;">
@@ -86,6 +86,6 @@
       c) 클래스 안에 테스트용 메서드를 만들어 DTO 선언을 한다<br>
       d) 공식:<span style="background-color: yellow;">DTO이름 변수명 = new DTO이름.builder().DTO키1("값").build();</span>
     </div>
-    <img src="img/s2/N.png" alt="" style="margin-left:50px">
+    <img src="img/S2/N.png" alt="" style="margin-left:50px">
   </p>
 </body>
