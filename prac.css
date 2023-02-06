@@ -1,0 +1,14 @@
+ul{
+  height: auto;
+}
+
+#answer{
+  padding-top: 10px;
+  padding-left: 10px;
+  list-style:none;
+  color:white
+}
+
+ul:active #answer{
+  color:black;
+}
