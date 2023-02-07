@@ -24,12 +24,122 @@
     1. 웹 어플리케이션은 독립 어플리케이션에 비해 웹 기반 응용프로그램으로서<br>
   웹 브라우저 상에서 HTTP 프로토콜 및 HTML 문서를 근간으로 만들어지는 어플리케이션이다<br>
   </span>
-  <ul>1-1. 웹 어플리케이션엔 어떠한 것이 있는지 예시 3개를 들어보세요
-    <li id="answer">웹브라우저(Edge,Chrome,Firefox 등)</li>
-    <li id="answer">웹 서버(Apache Server, IIS 등)</li>
-    <li id="answer">웹 어플리케이션 서버(Apache Tomcat 등)</li>
+  <ul>1-1. 웹 사이트에 대한 정의
+    <li id="answer">
+      웹 사이트(Website)는 정보 관람을 목적으로 하는 정적인 "사이트"<br>
+      대표적인 예시로는 뉴스페이지나 문서 페이지가 있다
+    </li>
   </ul>
-  <ul>1-2. 웹 사이트와 웹 어플리케이션의 차이에 대해 서술하세요
-    <li id="answer">웹 사이트(Website)는 정보 관람을 목적으로 하는 정적인 "사이트"</li>
+  <ul>1-2. 웹 어플리케이션의 정의와 구성요소
+    <li id="answer">
+      웹 어플리케이션(application)은 동적인 기능을 가진 웹<br>
+      유저간의 상호작용=소통을 가능하게 하여 유저가 능동적으로 서비스를 이용가능<br>
+      대표적인 예시로는 지도 어플이 있다.
+    </li><br><br>
+    <li id="answer">
+      웹 어플리케이션의 구성요소에는 총 4가지가 있다<br>
+      - 웹 브라우저 : 사용자가 요청한 웹 서버의 결과를 화면에 출력해서 보여주는 어플리케이션<br>
+      (대표적으로 Edge,Chrome,Firefox 등의 인터넷 브라우저들)<br><br>
+      - 웹 서버 : 웹 브라우저의 요청을 받아 그 결과를 브라우저로 응답해주는 역할을 하는 어플리케이션<br>
+      (대표적으로 Apache Server, IIS 등이 있다)<br><br>
+      - 웹 어플리케이션 서버 : 요청한 페이지의 로직 또는 데이터베이스와의 연동을 처리하는 부분<br>
+      (대표적으로 Apache Tomcat 등이 있다)<br><br>
+      - 데이터베이스 : 데이터를 저장하는 곳이다<br>
+      (대표적으로 : MySQL, Oracle 등을 사용)
+    </li>
   </ul>
+  <hr>
+
+  <span>2. 디스크에 데이터 레코드를 구성하는 데이터 구조인 index는<br>
+    데이터 검색시 접근시간 단축에 영향을 미친다.
+  </span>
+  <ul>O 또는 X로 답하고 그 이유도 설명하세요
+    <li id="answer">
+      (O)index는 책의 색인과 같은 부분이라 조회하는 속도가 빠르고 시스템의 부하를 줄일 수 있음.
+    </li>
+  </ul>
+  <hr>
+
+  <span>3. 다음 java코드를 분석하고 틀린 부분이 있을시 수정하세요<br>
+    그리고 각각의 변수타입비트단위도 서술하세요.
+  </span>
+  <ul>3-1. float a = 123.2f;
+    <li id="answer">
+      문제없음, float는 4byte 형태의 실수를 표현.
+    </li>
+  </ul>
+  <ul>3-2. double b = 123.2;
+    <li id="answer">
+      문제없음, double는 8byte 형태의 실수를 표현.
+    </li>
+  </ul>
+  <ul>3-3. boolean c = 1;
+    <li id="answer">
+      boolean는 true false로 선언 가능한 논리형. 1byte로 표현
+    </li>
+  </ul>
+  <ul>※원시타입과 참조타입
+    <li id="answer">
+      원시타입(Primitive Type)<br>
+      정수,실수,문자,논리 리터럴 등 실제 데이터 값을 저장하는 타입
+    </li>
+    <li id="answer">
+      참조타입(Reference Type)<br>
+      원시 타입을 제외한 타입(문자열,배열,열거,클래스,인터페이스)를 말함
+    </li>
+  </ul>
+  <hr>
+
+  <span>4.검증검사(Validation Test)
+  </span>
+  <ul>4-1. 검증검사의 기법으로 맞는것을 고르세요
+    <li id="answer2">1)단위 테스트</li>
+    <li id="answer2">2)통합 테스트</li>
+    <li id="answer2" class="correct">3)알파 테스트</li><span>*</span>
+    <li id="answer2">4)인수 테스트</li>
+  </ul>
+  <ul>4-2. 그 기법은 어떠한 방식으로 진행되는지 서술하세요
+    <li id="answer">
+      개발자의 장소에서 사용자가 개발자 앞에서 행하는 검사기법<br>
+      통제된 환경에서 오류와 사용상의 문제점을 사용자와 개발자가 함께 확인하며 기록한다
+    </li>
+  </ul>
+  <hr>
+
+  <span>5. 자바 언어에서 request 주요 메소드 이름과 설명에 대한 내용을 서술하세요
+  </span>
+  <ul>5-1. request의 정의에 대해 서술하세요
+    <li id="answer">
+      사용자가 서버에 웹 브라우저로 페이지를 요청할 때 브라우저가 사용자 요청과 관련된<br>
+      일련의 데이터들을 HTTP 메세지로 구성해 서버로 전송하는데 이 모든 요청이 request 다.
+    </li>
+  </ul>
+  <ul>5-2. getParamaterNames() 메서드
+    <li id="answer">
+      사용자로부터 넘어온 파라미터 변수값을 얻는 방법(Enumberation-열거 값 형태)
+    </li>
+  </ul>
+  <ul>5-3. getParamater(name)
+    <li id="answer">
+      request 객체로부터 name 에 대한 값을 가져오는 메서드
+    </li>
+  </ul>
+  <ul>5-2. getParamaterValues(name)
+    <li id="answer">
+      배열을 이용하여 name에 대한 여러가지 값을 받아올 수 있는 메서드(chekbox 등)
+    </li>
+  </ul>
+  <hr>
+
+  <span>6. 다음 빈칸에 들어갈 용어를 서술하세요
+  </span>
+  <p>
+    input 태그가 지닌 type 속성이 text, password, checkbox, radio일 경우는 (<span class="answer"> value </span>)<br>
+    속성에 기입한 내용이 기본적으로 초기 입력 내용으로 설정된다<br>
+    한편, (<span class="answer"> maxlength </span>) 속성은 type 속성이 text와 password일때 나타나는<br>
+    입력 필드에서만 사용되며 문자 입력창의 글자 수를 지정하기 위해 사용된다.
+  </p>
+
+  
+  
 </body>

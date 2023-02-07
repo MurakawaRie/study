@@ -1,12 +1,19 @@
 ul{
   height: auto;
+  margin-bottom: 50px
 }
 
 #answer{
   padding-top: 10px;
   padding-left: 10px;
   list-style:none;
-  color:black;
+  opacity: 1;
+}
+
+#answer2{
+  padding-top: 10px;
+  padding-left: 10px;
+  list-style:none;
 }
 
 @media (hover: hover)
@@ -16,10 +23,26 @@ ul{
     padding-top: 10px;
     padding-left: 10px;
     list-style:none;
-    color:white;
+    opacity: 0;
+  }
+
+  .answer{
+    opacity: 0;
+  }
+
+  p:hover .answer{
+    opacity: 1;
   }
 
   ul:hover #answer{
-    color:black;
+    opacity: 1;
+  }
+
+  ul:hover .correct{
+    color:red;
+  }
+
+  ul>span{
+    display: none;
   }
 }
