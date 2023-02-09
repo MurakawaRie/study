@@ -2,6 +2,10 @@ span{
   font-size:1.5rem
 }
 
+li{
+  list-style:none;
+}
+
 ul{
   height: auto;
   margin-bottom: 50px
@@ -30,11 +34,20 @@ ul{
     opacity: 0;
   }
 
+  li>span{
+    font-size: 1rem;
+  }
+
   .answer{
     opacity: 0;
+    font-size: 1rem;
   }
 
   p:hover .answer{
+    opacity: 1;
+  }
+
+  ul:hover .answer{
     opacity: 1;
   }
 
