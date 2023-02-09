@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Maplestory font -->
+  <link href="https://webfontworld.github.io/NexonMaplestory/NexonMaplestory.css" rel="stylesheet">
+  <!-- Bootstrap icon cdn  -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+
+
+  <!-- Main css -->
+  <link rel="stylesheet" href="main.css">
+  <title>1. 기본적인 세팅, DB에 테이블 만들고 값 삽입</title>
+</head>
+
+<body>
+  <a href="index.html" style="font-size:1.5rem"><i class="bi bi-house"></i>뒤로가기</a>
+  <hr>
+  <h1>1) 기본적인 세팅, DB에 테이블 만들고 값 삽입</h1>
+  <hr>
+  <p>1. 이클립스 톰캣서버 기본설정 후 cmd에서 <span style="background-color: yellow;">sqlplus</span>를 입력하여 oracle에 접속한다<br>
+    기본 아이디 비밀번호는 설치시 설정한 system / 1234 이다
+    <img src="img/J1/A.png" alt="">
+  </p>
+
+  <p>2. 외부평가 문제지에 있는 테이블 자료를 작성한다<br>
+    이때 cmd에서 바로 작성하면 오타 발생시 새로 작성해야하니 메모장에서 미리 써두고 복붙하자<br>
+    <img src="img/J1/B.png" alt="">
+    <div style="border: 1px solid #000; width:500px; margin:0px 0px 30px 50px;">
+      <span>
+        <h3>기본 SQL문 정리</h3><br>
+        - 테이블 만들기<br>
+        create table 테이블명(<br>
+          컬럼1 자료형(길이) not null primary key,<br>
+          컬럼2 자료형(길이));<br><br>
+        - 값 삽입하기<br>
+        insert into 테이블명 values(컬럼1값,'컬럼2값');<br>
+        컬럼 자료형이 숫자가 아닐경우 작은따옴표를 붙여야한다<br><br>
+        - 시퀀스로 auto increment 만들기<br>
+        create sequence 시퀀스명<br>
+        start with 시작숫자<br>
+        increment by 증가량<br>
+        maxvalue 최대값<br>
+        cycle nocache;
+      </span>
+    </div>
+  </p>
+
+  <p>3. 테이블별로 샘플로 삽입할 데이터를 확인해보자<br>
+    member는 회원번호가 자동증가, money는 판매번호가 자동증가이다.<br>
+    sequence 를 만들어서 값을 넣어줄때 <span style="background-color: yellow;">시퀀스명.NEXTVAL</span>로 적용해주자<br><br>
+    <a href="img/J1/sql.txt" style="color:red; background-color:black;">create, sequence, insert SQL문</a><br><br>
+    <img src="img/J1/C.png" alt="">
+  </p>
+
+  <p>4. select문을 이용해서 작성한 데이터가 잘 들어갔는지 확인하고 <span style="background-color: yellow;">commit</span> 도 꼭 해주자<br>
+    <img src="img/J1/D1.png" alt="" style="border : 2px solid yellow"><br>
+    <img src="img/J1/D2.png" alt="" style="border : 2px solid yellow">
+  </p>
+
+  <p>5. eclipse로 돌아가서 문제에서 요구하는 기본적인 인터페이스를 index.jsp에 구현하자<br>
+    header,nav,section,footer 순으로 태그를 만들어주고 구현하면 된다
+    <img src="img/J1/E.png" alt="">
+  </p>
+
+  <p>6. 기본적인 CSS 프론트 처리를 해주고 메뉴에 a링크도 넣자<br>
+    index 완성 후 복붙해서 a링크로 움직일 join,update,sales,info jsp파일도 만들어준다<br>
+    세부내용은 어짜피 각 jsp파일 작업시 수정할 예정이다<br><br>
+    <a href="img/J1/css.txt" style="color:red; background-color:black;">CSS.txt</a><br><br>
+    <img src="img/J1/F1.png" alt=""><br>
+    <img src="img/J1/F2.png" alt=""><br>
+    <img src="img/J1/F3.png" alt="">
+  </p>
+  
+  <p>7. 6에서 넣은 a태그가 잘 작동하는지 페이지 이동으로 테스트
+    <img src="img/J1/G.png" alt="">
+  </p>
+</body>
