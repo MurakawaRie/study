@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Maplestory font -->
+  <link href="https://webfontworld.github.io/NexonMaplestory/NexonMaplestory.css" rel="stylesheet">
+  <!-- Bootstrap icon cdn  -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+
+
+  <!-- main css -->
+  <link rel="stylesheet" href="main.css">
+  <!-- prac css -->
+  <link rel="stylesheet" href="prac.css">
+</head>
+
+<body>
+  <a href="index.html" style="font-size:1.5rem"><i class="bi bi-house"></i>뒤로가기</a>
+  <hr>
+  <h1>연습문제 part 5</h1>
+  <span>
+    1. 다음 질문에 맞는 답을 서술하세요
+  </span>
+  <ul>1-1. MVC는 무엇의 약자인지 서술하고 각각의 역할과 요소를 서술하세요
+    <li id="answer">
+      <h4>M : Model</h4>
+      어플리케이션의 정보와 데이터를 나타냄<br>
+      데이터베이스, 초기화값, 변수 등을 뜻함<br><br>
+      <h4>V : View</h4>
+      input텍스트, 체크박스 등 사용자 인터페이스 요소를 나타냄<br>
+      데이터 및 객체의 입력, 출력을 담당하며 사용자가 볼 수 있는 화면<br><br>
+      <h4>C : Controller</h4>
+      데이터와 사용자 인터페이스 요소를 잇는 다리역할을 함<br>
+      사용자가 데이터를 클릭,수정하는 등 "이벤트"를 처리하는 부분<br>
+    </li>
+  </ul>
+  <hr>
+
+  <span>
+    2. 다음 코드를 보고 질문에 답하세요
+  </span>
+  <ul>2-1.<br>
+    public class Test{}<br>
+    public class Test extends Object{}<br>
+    두 코드는 같은 코드입니까? 왜 그런지도 서술하세요
+    <li id="answer">
+      같은코드이다<br>
+      모든 자바의 클래스는 Object를 암묵적으로 상속받고 있어 생략되어있기 때문
+    </li>
+  </ul>
+  <ul>2-2.<br>
+    public class Test extends Object {<br>
+      super();<br>
+    }<br>
+    다음 코드는 맞는 코드입니까?
+    <li id="answer">
+      아니다<br>
+      모든 클래스는 Object를 암묵적으로 상속 받고 있으므로 super()를 쓰면 다중상속이다<br>
+      디폴트 생성자 안에 넣어주어야 한다
+    </li>
+  </ul>
+  <hr>
+
+  <span>
+    3. 다음 설명에 대한 질문에 답하세요
+  </span>
+  <ul>3-1.<br>
+    1) 이것은 특정 객체와 데이터 자료형이 가지고 있는 함수다<br>
+    2) 데이터와 멤버 변수에 대한 접근 권한을 가지고 있다<br>
+    3) 특정한 작업이나 논리를 구성하는 코드를 괄호로 묶은 것이다<br>
+    4) 입력 값을 받아서 내부에서 처리해 결과를 출력 및 반환 한다
+    <li id="answer">
+      메소드(Method)<br>
+      3번의 괄호는 중괄호로 묶는것을 말한다
+    </li>
+  </ul>
+  <ul>3-2. <span class="answer">메소드</span>를 호출하는 방법에 대해 서술하세요
+    <li id="answer">
+      void 함수명() {return 선언 없음}<br>
+      변수타입 함수명() {변수타입에 맞는 return 선언 있음}<br>
+    </li>
+  </ul>
+  <ul>3-3. <span class="answer">메소드</span>는 이것을 만나면 값을 반환하지 않고 종료된다
+    <li id="answer">
+      null 값
+    </li>
+  </ul>
+  <hr>
+
+  <span>
+    4. 클래스의 구성에 대한 질문에 답하세요
+  </span>
+  <ul>객체 , 함수 , 변수의 기능과 담고있는 데이터를 답하세요
+    <li id="answer">
+      -객체 : 구체적, 추상적 데이터의 단위(의사나 행위가 미치는 대상)<br><br>
+      -함수 : 하나의 기능을 수행하는 일련의 코드<br><br>
+      -변수 : 데이터를 저장할 수 있게 이름을 할당받은 메모리 공간
+    </li>
+  </ul>
+  <hr>
+</body>

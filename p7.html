@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Maplestory font -->
+  <link href="https://webfontworld.github.io/NexonMaplestory/NexonMaplestory.css" rel="stylesheet">
+  <!-- Bootstrap icon cdn  -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+
+
+  <!-- main css -->
+  <link rel="stylesheet" href="main.css">
+  <!-- prac css -->
+  <link rel="stylesheet" href="prac.css">
+</head>
+
+<body>
+  <a href="index.html" style="font-size:1.5rem"><i class="bi bi-house"></i>뒤로가기</a>
+  <hr>
+  <h1>연습문제 part 7</h1>
+  <span>
+    1. 다음은 HTTP 상태코드에 대한 내용입니다
+  </span>
+  <ul>1-1. 200
+    <li id="answer">
+      서버가 요청을 제대로 처리했음
+    </li>
+  </ul>
+  <ul>1-2. 404
+    <li id="answer">
+      Not Found, 서버가 요청한 페이지를 찾을 수 없음
+    </li>
+  </ul>
+  <ul>1-3. 405
+    <li id="answer">
+      허용되지 않은 메소드에 접근하였음
+    </li>
+  </ul>
+  <ul>1-4. 500
+    <li id="answer">
+      내부 서버 오류, 서버오류로 요청을 수행할 수 없는 상태
+    </li>
+  </ul>
+  <hr>
+
+  <span>
+    2. 제네릭(Generic)
+  </span>
+  <ul>2-1. 제네릭이란 무엇입니까?
+    <li id="answer">
+      데이터의 타입을 일반화(Generalize) 시켜주는 것
+    </li>
+  </ul>
+  <ul>2-2. 제네릭을 사용할시에 장점은?
+    <li id="answer">
+      클래스나 메소드 내부의 객체 타입 안정성을 높일 수 있다<br>
+      반환값에 대한 타입변환이나 타입검사에 들이는 노력을 줄일 수 있다
+    </li>
+  </ul>
+  <hr>
+
+  <span>
+    3. 컬렉션 프레임워크
+  </span>
+  <ul>3-1. 자바에 있어서 '컬렉션 프레임워크'는 무엇입니까?
+    <li id="answer">
+      다수의 데이터를 쉽고 효율적으로 처리할 수 있게 해주는 클래스의 집합이다<br>
+      (인터페이스를 사용해서 구현한다)
+    </li>
+  </ul>
+  <ul>3-2. 자바에 왜 '컬렉션 프레임워크'가 생겼을까요
+    <li id="answer">
+      코드를 직접 작성할 필요 없이 이미 구현된 컬렉션 클래스를 목적에 맞게 사용할 수 있게 해줌
+    </li>
+  </ul>
+  <ul>3-3. 빈칸에 알맞은 내용을 넣으세요
+    <li>
+      자바 컬렉션은 (<span class="answer">객체</span>)를 수집해서 저장하는 역할을 한다<br>
+      프레임워크란 (<span class="answer">데이터를 처리하는 알고리즘</span>)을 미리 정해놓은 (<span class="answer">클래스</span>)이다<br>
+      컬렉션의 주요 (<span class="answer">인터페이스</span>)로는 (<span class="answer">List</span>),(<span class="answer">Set</span>),(<span class="answer">Map</span>)가 있다
+    </li>
+  </ul>
+  <ul>3-4. 빈칸에 알맞은 내용을 넣으세요
+    <li>
+      (<span class="answer">ArrayList</span>),(<span class="answer">Vector</span>),(<span class="answer">LinkedList</span>)는 List인터페이스를 구현한 클래스로<br>
+      List인터페이스로 사용 가능한 컬렉션이다
+    </li>
+  </ul>
+  <ul>3-5. 빈칸에 알맞은 내용을 넣으세요
+    <li>
+      (<span class="answer">HashMap</span>),(<span class="answer">TreeMap</span>),(<span class="answer">Hashtable</span>)는 Map인터페이스를 구현한 클래스로<br>
+      Map인터페이스로 사용 가능한 컬렉션이다<br>
+      또한 Map인터페이스는 제네릭 타입이다
+    </li>
+  </ul>
+  <ul>3-6. List 컬렉션은 어떤 방식으로 객체를 담고 사용합니까?
+    <li id="answer">
+      배열을 이용하여 객체를 담고 같은 요소의 중복 저장도 허용함
+    </li>
+  </ul>
+  <ul>3-7. 빈번한 객체 삭제와 삽입이 일어나는 곳에서는 이것을 사용하는것이 좋다
+    <li id="answer">
+      LinkedList
+    </li>
+  </ul>
+  <ul>3-8. List 인터페이스는 무슨 타입입니까?
+    <li id="answer">
+      제네릭
+    </li>
+  </ul>
+  <ul>3-9. ArrayList가 3-7과 비교해 장점을 서술하세요
+    <li id="answer">
+      데이터를 읽어오거나 저장할때 효율적이다<br>
+      데이터의 저장순서를 유지하고 Object 배열을 이용해 순차적으로 저장하기 때문
+    </li>
+  </ul>
+  <ul>3-10. 빈칸에 알맞은 내용을 넣으세요
+    <li>
+      Map 컬렉션은 ( <span class="answer">키(key)</span> )와 ( <span class="answer">값(value)</span> )으로 구성된 Entry 객체를 저장하는 구조를 가지고 있다<br>
+      여기서 키와 값은 모두 ( <span class="answer">객체</span> ) 이다<br>
+      또한 Map 컬렉션은 키와 값의 중복저장이 ( <span class="answer">불가능</span> )하다
+    </li>
+  </ul>
+  <hr>
+
+  <span>
+    4. HashMap
+  </span>
+  <ul>4-1. 빈칸에 알맞은 내용을 넣으세요
+    <li>
+      HashMap은 Map인터페이스를 구현한 대표적인 Map 컬렉션이다<br>
+      주로 키 타입은 ( <span class="answer">String</span> )을 사용한다
+    </li>
+  </ul>
+  <ul>4-2. 빈칸에 알맞은 내용을 넣으세요
+    <li>
+      키와 값의 타입은 ( <span class="answer">배열</span> )을 사용할 수 없고<br>
+      클래스와 인터페이스만 사용이 가능하다
+    </li>
+  </ul>
+  <hr>
+
+  <span>
+    5. JSP
+  </span>
+  <ul>5-1. DTO를 왜 만들어야 합니까?
+    <li id="answer">
+      비즈니스 로직의 캡슐화로 보안을 강화할 수 있다
+    </li>
+  </ul>
+  <ul>5-2. getter , setter는 왜 만드는 것입니까?
+    <li id="answer">
+      직접적인 접근을 막고 외부에서 메소드를 통해 접근하도록 유도하기 위해서
+    </li>
+  </ul>
+  <ul>5-3. default 생성자를 만들지 않을 경우 무슨 일이 발생합니까?
+    <li id="answer">
+      컴파일러가 자동으로 default생성자를 추가해준다
+    </li>
+  </ul>
+  <ul>5-4. DAO는 왜 만들어야 합니까?
+    <li id="answer">
+      효율적인 커넥션 관리와 보안, DB접근을 위한 로직과 비즈니스로직을 분리하려고
+    </li>
+  </ul>
+  <hr>
+</body>

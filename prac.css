@@ -1,4 +1,4 @@
-span{
+body>span{
   font-size:1.5rem
 }
 
@@ -59,7 +59,9 @@ ul{
     color:red;
   }
 
-  ul>span{
-    display: none;
+  ul>#correct{
+    display:none;
   }
+
+
 }

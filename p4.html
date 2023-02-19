@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Maplestory font -->
+  <link href="https://webfontworld.github.io/NexonMaplestory/NexonMaplestory.css" rel="stylesheet">
+  <!-- Bootstrap icon cdn  -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+
+
+  <!-- main css -->
+  <link rel="stylesheet" href="main.css">
+  <!-- prac css -->
+  <link rel="stylesheet" href="prac.css">
+</head>
+
+<body>
+  <a href="index.html" style="font-size:1.5rem"><i class="bi bi-house"></i>뒤로가기</a>
+  <hr>
+  <h1>연습문제 part 4</h1>
+  <span>
+    1. JavaScript에서 함수를 초기화 할때 사용되는<br>
+    document와 windows의 정의와 차이점을 서술하라
+  </span>
+  <ul>1-1. doucment
+    <li id="answer">
+      브라우저 창 안의 HTML 문서 객체<br>
+      window 안에 document 객체가 포함되어 있다
+    </li>
+  </ul>
+  <ul>1-2. window
+    <li id="answer">
+      브라우저의 창, 브라우저 탭의 전역 객체
+    </li>
+  </ul>
+  <hr>
+
+  <span>
+    2. JavaScript의 코드에 대한 질문에 답하세요
+  </span>
+  <ul>2-1. addEventListener의 원리
+    <li id="answer">
+      document의 특정 요소에 대한 event를 등록할때 사용함<br>
+      <h3>자주 사용하는 event의 종류</h3><br>
+      click : 마우스 클릭<br>
+      mouserover : hover와 같음<br>
+      mouseout : 마우스가 요소 밖으로 벗어날때<br>
+      mousedown : 마우스 클릭후 드래그를 하는 동안
+    </li>
+  </ul>
+  <ul>2-2. innertext와 innerHTML의 차이
+    <li id="answer">
+      - innerText<br>
+      문자열 그대로를 포함시킴<br><br>
+      - innerHTML<br>
+      입력된 문자열을 html태그로 해석하여 출력시킴
+    </li>
+  </ul>
+  <ul>2-3. jQuery의 정의에 대해 서술하세요
+    <li id="answer">
+      오픈 소스 기반의 자바스크립트 라이브러리<br>
+      스크립트 언어를 단순화하도록 설계되었고 브라우저 호환성이 있음<br>
+      현재는 React등의 대안들이 등장하여 입지가 많이 낮아졌다
+    </li>
+  </ul>
+  <hr>
+
+  <span>
+    3. 다음 CSS 코드들에 대해 설명하세요
+  </span>
+  <ul>2-1. display : flex
+    <li id="answer">
+      요소들의 width 만큼만 차지하면서 가로방향으로 배치시킴<br>
+      height는 요소의 최대 높이만큼 알아서 늘어남
+    </li>
+  </ul>
+  <ul>2-2. opacity
+    <li id="answer">
+      투명도 조절(0~1)
+    </li>
+  </ul>
+  <ul>2-3. border
+    <li id="answer">
+      테두리를 만들어 주는 코드<br>
+      보통 <span style="background-color: yellow;">border : *px solid color</span>순서로 사용한다<br>
+      (*는 두께, solid는 테두리 타입, color는 컬러)
+    </li>
+  </ul>
+  <ul>2-4. z-index
+    <li id="answer">
+      겹쳐진 요소들의 위아래 우선순위를 지정할 수 있다<br>
+      숫자가 클 수록 우선순위가 위라서 맨 위에 올라오게 됨
+    </li>
+  </ul>
+  <ul>2-5. align-items
+    <li id="answer">
+      소속된 요소 안에 포함된 모든 요소들을 소속된 요소의 높이에 맞게 세로정렬해줌<br>
+      align-items : start(시작지점 기준)<br>
+      align-items : end(끝지점 기준)<br>
+      align-items : center(중간지점으로)<br>
+      <a href="https://developer.mozilla.org/ja/docs/Web/CSS/align-items" style="color:red; background-color: black;">참고용 링크</a>
+    </li>
+  </ul>
+  <ul>2-6. justify-content
+    <li id="answer">
+      메인축을 기준으로해서 요소들을 정렬하는것<br>
+      space-between : 요소들의 사이(between)에 균일한 간격을 만듬<br>
+      space-around : 요소들의 둘레(around)에 균일한 간격을 만듬<br>
+      space-evenly : 요소들의 사이와 양 끝에 균일한 간격을 만듬<br>
+      <img src="https://studiomeal.com/wp-content/uploads/2020/01/10-1.jpg " alt="">
+    </li>
+  </ul>
+  <ul>2-7. padding
+    <li id="answer">
+      내용(content)과 테두리(border)사이의 간격(padding)을 설정한다<br>
+      (예제)<br>
+      padding : Apx Bpx Cpx Dpx; 아랫줄과 동일한 코드임<br>
+      padding-top:Apx; padding-right:Bpx; padding-bottom:Cpx; padding-left:Dpx;<br>
+      top,right,bottom,left 순서로 설정가능
+    </li>
+  </ul>
+  <ul>2-8. margin
+    <li id="answer">
+      테두리(border)와 이웃하는 요소 사이의 간격(margin)을 설정한다<br>
+      위의 padding과 동일하지만 음수를 사용해 다른요소랑 겹치게 가능
+    </li>
+  </ul>
+  <ul>2-9. transition
+    <li id="answer">
+      CSS가 특정 상황에서 변화할때 일정시간에 걸쳐 일어나게 해주도록 하는것<br>
+      (예제)
+      hover시 특정 효과가 발동되게 했을때<br>
+      transition : all 2s;(모든 변화를 2초에 걸쳐서 변화하게 함)<br>
+      <a href="https://poiemaweb.com/css3-transition" style="color:red; background-color: black;">참고용 링크</a>
+    </li>
+  </ul>
+  <ul>2-10. padding과 margin의 차이?
+    <li id="answer">
+      <img src="http://www.tcpschool.com/lectures/img_css_boxmodel_margin.png"><br>
+      위의 그림 참고<br>
+      padding은 요소와 border 사이의 간격이고<br>
+      margin은 다른요소와 border 사이의 간격이다
+    </li>
+  </ul>
+  <hr>
+
+  <span>
+    3. 간단한 단답형 문제에 답하세요
+  </span>
+  <ul>3-1. JavaScript와 CSS를 따로 만든 후 html에 그 외부 리소스를 연결하는 코드는?
+    <li id="answer">
+      link
+    </li>
+  </ul>
+  <ul>3-2. 프론트와 백엔드 개발을 따로 하지만 insert delete가 가능하게끔<br>
+    정보를 제출할 수 있게 도와주는 이 요소는 무엇인가?
+    <li id="answer">
+      form
+    </li>
+  </ul>
+  <hr>
+</body>
