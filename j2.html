@@ -21,20 +21,84 @@
   <h1>2) eclipse에서 DB 연결하고 DAO DTO 만들기</h1>
   <hr>
   <p>1. DB를 연결하기전에 C드라이브 oraclexe에서 jdbc6.jar 파일을 찾자<br>
-    경로 : <span style="background-color: yellow;">C:\oraclexe\app\oracle\product\11.2.0\server\jdbc\lib</span>
+    경로 : <span style="background-color: yellow;">C:\oraclexe\app\oracle\product\11.2.0\server\jdbc\lib</span><br>
     <img src="img/J2/A.png" alt="">
   </p>
-  <p>2. eclipse의 src/main/webapp/WEB-INF/lib 경로에 넣어주자<br>
+
+  <p>2. 이 jdbc6.jar 파일을 이클립스의 WEB-INF/lib 경로 안에 넣어준다<br>
     <img src="img/J2/B.png" alt="">
   </p>
-  <p>3. 위쪽의 Java Resources src/main/java에 DAO,DTO 패키지를 만들자<br>
-    <img src="img/J2/C.png" alt="">
+
+  <p>3. 이제 jar 라이브러리를 넣어주었으니 DTO DAO를 만들자<br>
+  우선 DTO는 아까 oracle의 테이블의 자료형을 확인하면서 만들어주자<br>
+  기본생성자, Getter Setter, toString()까지 정의해주자<br>
+    <img src="img/J2/C.png" alt=""><br>
+    <img src="img/J2/C2.png" alt="" style="border : 2px solid yellow"><br>
+    <img src="img/J2/C3.png" alt=""><br>
+    <img src="img/J2/C4.png" alt="" style="border : 2px solid yellow">
   </p>
-  <p>4. 아까 만든 테이블 컬럼값에 맞게 DTO를 만들어주고 기본생성자,Getter Setter등 선언<br>
-    date나 char의 경우는 String으로 선언해줘도 무방하다<br>
-    <img src="img/J2/D1.png" alt=""><br>
-    <img src="img/J2/D2.png" alt="" style="border : 2px solid yellow;"><br>
-    <img src="img/J2/D3.png" alt=""><br>
-    <img src="img/J2/D4.png" alt="" style="border : 2px solid yellow;">
+
+  <p>4. DAO를 통해 oracleDB와 이클립스를 연결해주는 작업을 하자<br>
+  아래는 기본생성자에 선언되는 기본적인 DB연결에 관한 코드다<br>
+    <img src="img/J2/D.png" alt="">
   </p>
+
+  <p>5. 회원등록 틀을 구현하기위해 DAO에 INSERT를 구현해준다<br>
+    <img src="img/J2/E.png" alt="">
+  </p>
+
+  <p>6. DAO에서 만든 INSERT를 join.jsp에 적용하기위해<br>
+  회원 가입 틀을 작성해주자. 회원번호는 자동부여이므로 disabled 처리하였다<br>
+    <img src="img/J2/F1.png" alt=""><br>
+    <img src="img/J2/F2.png" alt="">
+  </p>
+
+  <p>7. 6에서 만든 회원가입틀에 빈칸 입력에 대한 유효성검사를 위한<br>
+    JavaScript isValid()함수를 선언해주자<br>
+    isValid()함수는 제출 버튼에 기능을 부여해준다<br>
+    <img src="img/J2/G.png" alt="">
+  </p>
+
+  <p>8. 가입일자를 자동으로 입력되도록 계산하기 위해 jsp 코드를 사용하자<br>
+    <img src="img/J2/H.png" alt="">
+  </p>
+
+  <p>9. form의 내부 속성값에 method와 onsubmit 등을 수정해준다<br>
+    action의 proc/joinproc.jsp는 다음 10번에서 작업할 예정이다<br>
+    <img src="img/J2/I.png" alt=""><br>
+    <div style="border: 1px solid #000; width:500px; margin:0px 0px 30px 50px;">
+      <span>
+        <h3>form 태그 정리</h3><br>
+        - action<br>
+        폼을 전송할 서버 쪽 스크립트 파일을 지정함<br><br>
+        - method<br>
+        폼을 서버에 전송할 http 메소드를 정한다(GET 또는 POST)<br><br>
+        - onsubmit : return false<br>
+        form에서 action을 발동할때 그 경로로 이동하지 않게 해줌
+      </span>
+    </div>
+  </p>
+
+  <p>10. proc/joinproc.jsp를 만들어 form에 입력한 값을 받아 db로 전달할 수 있게 만들어주자<br>
+    <img src="img/J2/J.png" alt=""><br>
+    <div style="border: 1px solid #000; width:500px; margin:0px 0px 30px 50px;">
+      <span>
+        <h3>jsp 태그 정리</h3><br>
+        - jsp:useBean<br>
+        javaBean(예:DTO) 클래스에 접근하기위해 사용<br>
+        id : 클래스에 접근할때 사용할 이름<br>
+        class : 패키지를 포함한 패키지의 완전한 경로<br><br>
+        - jsp:setProperty<br>
+        생성된 name이란 이름에 대한 클래스에 프로퍼티 값을 지정한다<br>
+        *라고 설정하면 각각 프로퍼티를 같은이름을 갖는 파라미터 값으로 설정해준다<br>
+      </span>
+    </div>
+  </p>
+
+  <p>11. 서버를 새로 켜고 회원등록에서 정상적으로 insert가 되는지 확인해보자<br>
+    <img src="img/J2/K1.png" alt=""><br>
+    <img src="img/J2/K2.png" alt=""><br>
+    <img src="img/J2/K3.png" alt="">
+  </p>
+
 </body>
